@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Page menu</title>
+  </head>
+  <body id="body">
+    <!--
+    Only the internal content of the following div is included within
+    the template, in menu fragment
+    -->
+    <nav class="navbar navbar-default navbar-static-top" data-th-fragment="menu">
+
+         <div class="container">
+
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainnav" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <!-- Brand logo -->
+              <div class="organization-logo navbar-brand">
+                <a title="finbuddy" href="/" data-th-href="@{/}">
+                  <img alt="finbuddy" data-th-src="@{/public/img/logo.png}" src="../../static/public/img/logo.png" />
+                </a>
+              </div>
+              <!-- Name application -->
+              <div class="application-name navbar-brand hidden-xs">
+                <a data-th-title="#{label_goHome}" href="/" data-th-href="@{/}">finbuddy</a>
+              </div>
+
+            </div><!-- /navbar-header -->
+
+            <div id="mainnav" class="navbar-collapse collapse">
+
+              <ul class="nav navbar-nav" id="entitiesMenuEntries">
+                <li class="dropdown" id="account-entry" data-z="8d44d1d6">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_account})}">Account<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/accounts/create-form" data-th-href="@{/accounts/create-form}" data-th-utext="#{label_create_entity(#{label_account})}">Create Account</a></li>
+	                  <li><a href="/accounts" data-th-href="@{/accounts}" data-th-utext="#{label_list_entity(#{label_account_plural})}">List Account</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="customer-entry" data-z="5dd5c6e8">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_customer})}">Customer<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/customers/create-form" data-th-href="@{/customers/create-form}" data-th-utext="#{label_create_entity(#{label_customer})}">Create Customer</a></li>
+	                  <li><a href="/customers" data-th-href="@{/customers}" data-th-utext="#{label_list_entity(#{label_customer_plural})}">List Customer</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="directdebt-entry" data-z="3e4a18c8">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_directdebt})}">DirectDebt<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/directdebts/create-form" data-th-href="@{/directdebts/create-form}" data-th-utext="#{label_create_entity(#{label_directdebt})}">Create DirectDebt</a></li>
+	                  <li><a href="/directdebts" data-th-href="@{/directdebts}" data-th-utext="#{label_list_entity(#{label_directdebt_plural})}">List DirectDebt</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="thirdparty-entry" data-z="317c7da1">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_thirdparty})}">ThirdParty<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/thirdparties/create-form" data-th-href="@{/thirdparties/create-form}" data-th-utext="#{label_create_entity(#{label_thirdparty})}">Create ThirdParty</a></li>
+	                  <li><a href="/thirdparties" data-th-href="@{/thirdparties}" data-th-utext="#{label_list_entity(#{label_thirdparty_plural})}">List ThirdParty</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="txn-entry" data-z="2c5ec956">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_txn})}">Txn<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/txns/create-form" data-th-href="@{/txns/create-form}" data-th-utext="#{label_create_entity(#{label_txn})}">Create Txn</a></li>
+	                  <li><a href="/txns" data-th-href="@{/txns}" data-th-utext="#{label_list_entity(#{label_txn_plural})}">List Txn</a></li>
+                 </ul>
+                </li>
+              </ul>
+
+              <!-- Language select -->
+              <ul class="nav navbar-nav navbar-right upper-nav languages" data-th-replace="~{fragments/languages :: languages}">
+                <!-- Content replaced by the session template fragment language.html
+                -->
+                <span>Language data</span>
+              </ul>
+
+
+
+              <!-- User menu links -->
+              <ul class="nav navbar-nav navbar-right upper-nav links" data-th-replace="~{fragments/session-links :: links}">
+                <!-- Content replaced by the links template fragment session-links.html
+                -->
+                <span>User session data</span>
+              </ul>
+           </div>
+
+          </div>
+    </nav>
+
+    <!--
+    Only the internal content of the following div is included within
+    the template, in menu-languages fragment
+    -->
+    <nav class="navbar navbar-default navbar-static-top" data-th-fragment="menu-languages">
+
+         <div class="container">
+
+            <div class="navbar-header">
+
+              <!-- Brand logo -->
+              <div class="organization-logo navbar-brand">
+                <a title="finbuddy" href="/" data-th-href="@{/}">
+                  <img alt="finbuddy" data-th-src="@{/public/img/logo.png}" src="../../static/public/img/logo.png" />
+                </a>
+              </div>
+              <!-- Name application -->
+              <div class="application-name navbar-brand hidden-xs">
+                <a data-th-title="#{label_goHome}" href="/" data-th-href="@{/}">finbuddy</a>
+              </div>
+
+            </div><!-- /navbar-header -->
+
+            <div id="mainnav" class="navbar-collapse collapse">
+
+              <!-- Language select -->
+              <ul class="nav navbar-nav navbar-right upper-nav languages" data-th-replace="~{fragments/languages :: languages}">
+                <!-- Content replaced by the session template fragment language.html
+                -->
+                <span>Language data</span>
+              </ul>
+
+           </div>
+
+          </div>
+    </nav>
+
+  </body>
+</html>

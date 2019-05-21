@@ -5,6 +5,16 @@ package com.lbg.finbuddy.application.config.jackson;
 
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.lbg.finbuddy.application.config.jackson.DomainModelModule;
+import com.lbg.finbuddy.application.web.AccountJsonMixin;
+import com.lbg.finbuddy.application.web.CustomerJsonMixin;
+import com.lbg.finbuddy.application.web.DirectDebtJsonMixin;
+import com.lbg.finbuddy.application.web.ThirdPartyJsonMixin;
+import com.lbg.finbuddy.application.web.TxnJsonMixin;
+import com.lbg.finbuddy.model.Account;
+import com.lbg.finbuddy.model.Customer;
+import com.lbg.finbuddy.model.DirectDebt;
+import com.lbg.finbuddy.model.ThirdParty;
+import com.lbg.finbuddy.model.Txn;
 import org.springframework.boot.jackson.JsonComponent;
 
 privileged aspect DomainModelModule_Roo_DomainModelModule {
@@ -20,6 +30,11 @@ privileged aspect DomainModelModule_Roo_DomainModelModule {
     public DomainModelModule.new() {
         // Mixin registration
         
+        setMixInAnnotation(Account.class, AccountJsonMixin.class);
+        setMixInAnnotation(Customer.class, CustomerJsonMixin.class);
+        setMixInAnnotation(DirectDebt.class, DirectDebtJsonMixin.class);
+        setMixInAnnotation(ThirdParty.class, ThirdPartyJsonMixin.class);
+        setMixInAnnotation(Txn.class, TxnJsonMixin.class);
     }
 
 }

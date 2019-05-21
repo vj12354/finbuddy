@@ -43,3 +43,16 @@ service --entity model:~.ThirdParty --repository repository:~.ThirdPartyReposito
 // Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2019-05-21 13:40:54
 module focus --moduleName application 
 web mvc setup 
+web mvc view setup --type THYMELEAF 
+web mvc controller --entity model:~.Customer 
+web mvc controller --all
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2019-05-21 13:48:57
+module focus --moduleName application 
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2019-05-21 14:00:22
+module focus --moduleName application 
+web mvc view setup --type THYMELEAF 
+web mvc controller --entity model:~.Customer --responseType THYMELEAF 
+web mvc controller --responseType THYMELEAF --entity model:~.Account
+web mvc controller --responseType THYMELEAF --entity model:~.Txn
+web mvc controller --responseType THYMELEAF --entity model:~.DirectDebt 
+web mvc controller --responseType THYMELEAF --entity model:~.ThirdParty 
