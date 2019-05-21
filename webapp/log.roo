@@ -21,3 +21,13 @@ field string --fieldName notes
 entity jpa --class ~.DirectDebt 
 field string --fieldName name --notNull 
 field string --fieldName description
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2019-05-21 12:50:21
+module focus --moduleName repository
+repository jpa --entity model:~.Customer --interface ~.CustomerRepository
+repository jpa --entity model:~.Account --interface ~.AccountRepository
+repository jpa --entity model:~.Txn --interface ~.TxnRepository
+repository jpa --entity model:~.DirectDebt --interface ~.DirectDebtRepository
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2019-05-21 12:55:45
+module focus --moduleName model 
+entity jpa --class ~.ThirdParty
+field string --fieldName description
