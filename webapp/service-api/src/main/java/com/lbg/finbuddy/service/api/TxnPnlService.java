@@ -10,4 +10,5 @@ import org.springframework.roo.addon.layers.service.annotations.RooService;
  */
 @RooService(entity = TxnPnl.class)
 public interface TxnPnlService {
+	void generatePDLs();
 }

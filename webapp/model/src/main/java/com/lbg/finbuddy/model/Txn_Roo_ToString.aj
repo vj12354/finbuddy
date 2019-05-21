@@ -19,6 +19,8 @@ privileged aspect Txn_Roo_ToString {
                 ", txDate='" + txDate + '\'' + 
                 ", amount='" + amount + '\'' + 
                 ", description='" + description + '\'' + 
+                ", toNomber='" + toNomber + '\'' + 
+                ", toSortcode='" + toSortcode + '\'' + 
                 ", ITERABLE_TO_ADD_CANT_BE_NULL_MESSAGE='" + ITERABLE_TO_ADD_CANT_BE_NULL_MESSAGE + '\'' + 
                 ", ITERABLE_TO_REMOVE_CANT_BE_NULL_MESSAGE='" + ITERABLE_TO_REMOVE_CANT_BE_NULL_MESSAGE + '\'' + "}" + super.toString();
     }

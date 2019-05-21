@@ -453,6 +453,12 @@ privileged aspect TxnsCollectionThymeleafController_Roo_Thymeleaf {
         else if (columnName.equals("description")) {
             builder.addColumn(getMessageSource().getMessage("label_txn_description", null, "Description", locale), "description", String.class.getName(), 100);
         }
+        else if (columnName.equals("toNomber")) {
+            builder.addColumn(getMessageSource().getMessage("label_txn_tonomber", null, "To Nomber", locale), "toNomber", String.class.getName(), 100);
+        }
+        else if (columnName.equals("toSortcode")) {
+            builder.addColumn(getMessageSource().getMessage("label_txn_tosortcode", null, "To Sortcode", locale), "toSortcode", String.class.getName(), 100);
+        }
         }
         catch (ColumnBuilderException e) {
             String errorMessage = getMessageSource().getMessage("error_exportingErrorException", 

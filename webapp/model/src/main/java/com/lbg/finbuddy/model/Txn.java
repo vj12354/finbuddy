@@ -8,6 +8,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Version;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
 import java.util.Date;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -64,4 +68,20 @@ public class Txn {
     
     @ManyToOne
     private Account account;
+
+    /**
+     * TODO Auto-generated attribute documentation
+     *
+     */
+    @Size(min = 8, max = 8)
+    @Pattern(regexp = "\\d+")
+    private String toNomber;
+
+    /**
+     * TODO Auto-generated attribute documentation
+     *
+     */
+    @Size(min = 6, max = 6)
+    @Pattern(regexp = "\\d+")
+    private String toSortcode;
 }

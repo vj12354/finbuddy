@@ -90,6 +90,22 @@
       <span id="account-error" class="help-block" data-th-if="${#fields.hasErrors('account')}" data-th-errors="*{account}">Error message.</span>
     </div>
 </div>
+<div class="form-group has-error has-feedback" data-z="31e6971f" id="txn-tonomber-field" data-th-classappend="${#fields.hasErrors('toNomber')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="toNomber" class="col-md-3 control-label" data-th-text="#{label_txn_tonomber}">toNomber</label>
+  <div class="col-md-6">
+    <input id="toNomber" name="toNomber" data-th-value="*{{toNomber}}" type="text" class="form-control" placeholder="toNomber" data-th-placeholder="#{label_txn_tonomber}" data-toggle="tooltip" aria-describedby="toNomberStatus" maxlength="8" size="8" />
+      <span data-th-classappend="${#fields.hasErrors('toNomber')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('toNomber')}" aria-hidden="true"></span>
+      <span id="toNomber-error" class="help-block" data-th-if="${#fields.hasErrors('toNomber')}" data-th-errors="*{toNomber}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="def9a61f" id="txn-tosortcode-field" data-th-classappend="${#fields.hasErrors('toSortcode')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="toSortcode" class="col-md-3 control-label" data-th-text="#{label_txn_tosortcode}">toSortcode</label>
+  <div class="col-md-6">
+    <input id="toSortcode" name="toSortcode" data-th-value="*{{toSortcode}}" type="text" class="form-control" placeholder="toSortcode" data-th-placeholder="#{label_txn_tosortcode}" data-toggle="tooltip" aria-describedby="toSortcodeStatus" maxlength="6" size="6" />
+      <span data-th-classappend="${#fields.hasErrors('toSortcode')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('toSortcode')}" aria-hidden="true"></span>
+      <span id="toSortcode-error" class="help-block" data-th-if="${#fields.hasErrors('toSortcode')}" data-th-errors="*{toSortcode}">Error message.</span>
+  </div>
+</div>
              </fieldset>
 
 

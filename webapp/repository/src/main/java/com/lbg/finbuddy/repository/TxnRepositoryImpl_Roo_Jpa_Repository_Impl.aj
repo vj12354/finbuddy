@@ -46,6 +46,18 @@ privileged aspect TxnRepositoryImpl_Roo_Jpa_Repository_Impl {
     public static final String TxnRepositoryImpl.ACCOUNT = "account";
     
     /**
+     * TODO Auto-generated attribute documentation
+     * 
+     */
+    public static final String TxnRepositoryImpl.TO_NOMBER = "toNomber";
+    
+    /**
+     * TODO Auto-generated attribute documentation
+     * 
+     */
+    public static final String TxnRepositoryImpl.TO_SORTCODE = "toSortcode";
+    
+    /**
      * TODO Auto-generated method documentation
      * 
      * @param globalSearch
@@ -58,14 +70,16 @@ privileged aspect TxnRepositoryImpl_Roo_Jpa_Repository_Impl {
         
         JPQLQuery<Txn> query = from(txn);
         
-        Path<?>[] paths = new Path<?>[] {txn.txDate,txn.amount,txn.description,txn.account};        
+        Path<?>[] paths = new Path<?>[] {txn.txDate,txn.amount,txn.description,txn.account,txn.toNomber,txn.toSortcode};        
         applyGlobalSearch(globalSearch, query, paths);
         
         AttributeMappingBuilder mapping = buildMapper()
 			.map(TX_DATE, txn.txDate)
 			.map(AMOUNT, txn.amount)
 			.map(DESCRIPTION, txn.description)
-			.map(ACCOUNT, txn.account);
+			.map(ACCOUNT, txn.account)
+			.map(TO_NOMBER, txn.toNomber)
+			.map(TO_SORTCODE, txn.toSortcode);
         
         applyPagination(pageable, query, mapping);
         applyOrderById(query);

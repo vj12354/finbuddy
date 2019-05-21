@@ -117,4 +117,40 @@ privileged aspect Txn_Roo_JavaBean {
         this.account = account;
     }
     
+    /**
+     * TODO Auto-generated method documentation
+     * 
+     * @return String
+     */
+    public String Txn.getToNomber() {
+        return this.toNomber;
+    }
+    
+    /**
+     * TODO Auto-generated method documentation
+     * 
+     * @param toNomber
+     */
+    public void Txn.setToNomber(String toNomber) {
+        this.toNomber = toNomber;
+    }
+    
+    /**
+     * TODO Auto-generated method documentation
+     * 
+     * @return String
+     */
+    public String Txn.getToSortcode() {
+        return this.toSortcode;
+    }
+    
+    /**
+     * TODO Auto-generated method documentation
+     * 
+     * @param toSortcode
+     */
+    public void Txn.setToSortcode(String toSortcode) {
+        this.toSortcode = toSortcode;
+    }
+    
 }
