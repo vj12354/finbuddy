@@ -10,11 +10,13 @@ import com.lbg.finbuddy.application.web.CustomerJsonMixin;
 import com.lbg.finbuddy.application.web.DirectDebtJsonMixin;
 import com.lbg.finbuddy.application.web.ThirdPartyJsonMixin;
 import com.lbg.finbuddy.application.web.TxnJsonMixin;
+import com.lbg.finbuddy.application.web.TxnPnlJsonMixin;
 import com.lbg.finbuddy.model.Account;
 import com.lbg.finbuddy.model.Customer;
 import com.lbg.finbuddy.model.DirectDebt;
 import com.lbg.finbuddy.model.ThirdParty;
 import com.lbg.finbuddy.model.Txn;
+import com.lbg.finbuddy.model.TxnPnl;
 import org.springframework.boot.jackson.JsonComponent;
 
 privileged aspect DomainModelModule_Roo_DomainModelModule {
@@ -35,6 +37,7 @@ privileged aspect DomainModelModule_Roo_DomainModelModule {
         setMixInAnnotation(DirectDebt.class, DirectDebtJsonMixin.class);
         setMixInAnnotation(ThirdParty.class, ThirdPartyJsonMixin.class);
         setMixInAnnotation(Txn.class, TxnJsonMixin.class);
+        setMixInAnnotation(TxnPnl.class, TxnPnlJsonMixin.class);
     }
 
 }

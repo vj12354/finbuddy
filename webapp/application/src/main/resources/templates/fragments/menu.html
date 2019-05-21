@@ -72,6 +72,13 @@
 	                  <li><a href="/txns" data-th-href="@{/txns}" data-th-utext="#{label_list_entity(#{label_txn_plural})}">List Txn</a></li>
                  </ul>
                 </li>
+                <li class="dropdown" id="txnpnl-entry" data-z="c6947108">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_txnpnl})}">TxnPnl<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/txnpnls/create-form" data-th-href="@{/txnpnls/create-form}" data-th-utext="#{label_create_entity(#{label_txnpnl})}">Create TxnPnl</a></li>
+	                  <li><a href="/txnpnls" data-th-href="@{/txnpnls}" data-th-utext="#{label_list_entity(#{label_txnpnl_plural})}">List TxnPnl</a></li>
+                 </ul>
+                </li>
               </ul>
 
               <!-- Language select -->
