@@ -4,16 +4,17 @@
 package com.lbg.finbuddy.model;
 
 import com.lbg.finbuddy.model.Account;
-import com.lbg.finbuddy.model.Customer;
+import com.lbg.finbuddy.model.Txn;
+import java.util.Date;
 
-privileged aspect Account_Roo_JavaBean {
+privileged aspect Txn_Roo_JavaBean {
     
     /**
      * TODO Auto-generated method documentation
      * 
      * @return Long
      */
-    public Long Account.getId() {
+    public Long Txn.getId() {
         return this.id;
     }
     
@@ -22,7 +23,7 @@ privileged aspect Account_Roo_JavaBean {
      * 
      * @param id
      */
-    public void Account.setId(Long id) {
+    public void Txn.setId(Long id) {
         this.id = id;
     }
     
@@ -31,7 +32,7 @@ privileged aspect Account_Roo_JavaBean {
      * 
      * @return Integer
      */
-    public Integer Account.getVersion() {
+    public Integer Txn.getVersion() {
         return this.version;
     }
     
@@ -40,62 +41,80 @@ privileged aspect Account_Roo_JavaBean {
      * 
      * @param version
      */
-    public void Account.setVersion(Integer version) {
+    public void Txn.setVersion(Integer version) {
         this.version = version;
     }
     
     /**
      * TODO Auto-generated method documentation
      * 
+     * @return Date
+     */
+    public Date Txn.getTxDate() {
+        return this.txDate;
+    }
+    
+    /**
+     * TODO Auto-generated method documentation
+     * 
+     * @param txDate
+     */
+    public void Txn.setTxDate(Date txDate) {
+        this.txDate = txDate;
+    }
+    
+    /**
+     * TODO Auto-generated method documentation
+     * 
+     * @return Float
+     */
+    public Float Txn.getAmount() {
+        return this.amount;
+    }
+    
+    /**
+     * TODO Auto-generated method documentation
+     * 
+     * @param amount
+     */
+    public void Txn.setAmount(Float amount) {
+        this.amount = amount;
+    }
+    
+    /**
+     * TODO Auto-generated method documentation
+     * 
      * @return String
      */
-    public String Account.getNomber() {
-        return this.nomber;
+    public String Txn.getDescription() {
+        return this.description;
     }
     
     /**
      * TODO Auto-generated method documentation
      * 
-     * @param nomber
+     * @param description
      */
-    public void Account.setNomber(String nomber) {
-        this.nomber = nomber;
+    public void Txn.setDescription(String description) {
+        this.description = description;
     }
     
     /**
      * TODO Auto-generated method documentation
      * 
-     * @return String
+     * @return Account
      */
-    public String Account.getSortcode() {
-        return this.sortcode;
+    public Account Txn.getAccount() {
+        return this.account;
     }
     
     /**
      * TODO Auto-generated method documentation
      * 
-     * @param sortcode
+     * @param account
      */
-    public void Account.setSortcode(String sortcode) {
-        this.sortcode = sortcode;
-    }
-    
-    /**
-     * TODO Auto-generated method documentation
-     * 
-     * @return Customer
-     */
-    public Customer Account.getCustomer() {
-        return this.customer;
-    }
-    
-    /**
-     * TODO Auto-generated method documentation
-     * 
-     * @param customer
-     */
-    public void Account.setCustomer(Customer customer) {
-        this.customer = customer;
+    public void Txn.setAccount(Account account) {
+        this.account = account;
     }
     
 }

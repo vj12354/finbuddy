@@ -1,4 +1,4 @@
-// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2019-05-21 10:10:40
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2019-05-21 12:05:52
 project setup --topLevelPackage com.lbg.finbuddy --projectName finbuddy --java 8 --multimodule STANDARD 
 module focus --moduleName model
 jpa setup --provider HIBERNATE --database H2_IN_MEMORY --profile dev --force
@@ -9,6 +9,15 @@ field string --fieldName userid --notNull --unique
 field string --fieldName password --column pazzword --notNull 
 module focus --moduleName model
 entity jpa --class ~.Account
-// [failed] field string --fieldName number --regexp "\d+" --notNull --sizeMin 8 --sizeMax 8
-// [failed] field string --fieldName nomber --regexp "\d+" --notNull true --sizeMin 8 --sizeMax 8
-// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2019-05-21 11:13:22
+field string --fieldName nomber --regexp "\d+" --notNull true --sizeMin 8 --sizeMax 8
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2019-05-21 12:19:06
+focus --class model:~.Account
+field string --fieldName sortcode --regexp "\d+" --notNull true --sizeMin 6 --sizeMax 6
+entity jpa --class ~.Transaction 
+entity jpa --class ~.Txn
+field date --fieldName txDate --type java.util.Date --dateFormat SHORT --timeFormat NONE 
+field number --fieldName amount --type java.lang.Float 
+field string --fieldName notes 
+entity jpa --class ~.DirectDebt 
+field string --fieldName name --notNull 
+field string --fieldName description

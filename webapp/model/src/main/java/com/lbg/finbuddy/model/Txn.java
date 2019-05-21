@@ -8,12 +8,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Version;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import java.util.Date;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.NumberFormat;
 
 /**
- * = Account
+ * = Txn
  *
  * TODO Auto-generated class documentation
  *
@@ -22,7 +24,7 @@ import javax.validation.constraints.Size;
 @RooToString
 @RooJpaEntity
 @RooEquals(isJpaEntity = true)
-public class Account {
+public class Txn {
 
     /**
      * TODO Auto-generated attribute documentation
@@ -43,20 +45,23 @@ public class Account {
      * TODO Auto-generated attribute documentation
      *
      */
-    @NotNull
-    @Size(min = 8, max = 8)
-    @Pattern(regexp = "\\d+")
-    private String nomber;
+    @Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(style = "S-")
+    private Date txDate;
 
     /**
      * TODO Auto-generated attribute documentation
      *
      */
-    @NotNull
-    @Size(min = 6, max = 6)
-    @Pattern(regexp = "\\d+")
-    private String sortcode;
+    @NumberFormat
+    private Float amount;
+
+    /**
+     * TODO Auto-generated attribute documentation
+     *
+     */
+    private String description;
     
     @ManyToOne
-    private Customer customer;
+    private Account account;
 }

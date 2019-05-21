@@ -13,7 +13,7 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 /**
- * = Account
+ * = DirectDebt
  *
  * TODO Auto-generated class documentation
  *
@@ -22,7 +22,7 @@ import javax.validation.constraints.Size;
 @RooToString
 @RooJpaEntity
 @RooEquals(isJpaEntity = true)
-public class Account {
+public class DirectDebt {
 
     /**
      * TODO Auto-generated attribute documentation
@@ -44,6 +44,22 @@ public class Account {
      *
      */
     @NotNull
+    private String name;
+
+    /**
+     * TODO Auto-generated attribute documentation
+     *
+     */
+    private String description;
+
+    @ManyToOne
+    private Account account;
+    
+    /**
+     * TODO Auto-generated attribute documentation
+     *
+     */
+    @NotNull
     @Size(min = 8, max = 8)
     @Pattern(regexp = "\\d+")
     private String nomber;
@@ -56,7 +72,4 @@ public class Account {
     @Size(min = 6, max = 6)
     @Pattern(regexp = "\\d+")
     private String sortcode;
-    
-    @ManyToOne
-    private Customer customer;
 }

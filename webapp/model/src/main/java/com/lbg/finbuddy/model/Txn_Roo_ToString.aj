@@ -3,21 +3,22 @@
 
 package com.lbg.finbuddy.model;
 
-import com.lbg.finbuddy.model.Account;
+import com.lbg.finbuddy.model.Txn;
 
-privileged aspect Account_Roo_ToString {
+privileged aspect Txn_Roo_ToString {
     
     /**
      * TODO Auto-generated method documentation
      * 
      * @return String
      */
-    public String Account.toString() {
-        return "Account {" + 
+    public String Txn.toString() {
+        return "Txn {" + 
                 "id='" + id + '\'' + 
                 ", version='" + version + '\'' + 
-                ", nomber='" + nomber + '\'' + 
-                ", sortcode='" + sortcode + '\'' + 
+                ", txDate='" + txDate + '\'' + 
+                ", amount='" + amount + '\'' + 
+                ", description='" + description + '\'' + 
                 ", ITERABLE_TO_ADD_CANT_BE_NULL_MESSAGE='" + ITERABLE_TO_ADD_CANT_BE_NULL_MESSAGE + '\'' + 
                 ", ITERABLE_TO_REMOVE_CANT_BE_NULL_MESSAGE='" + ITERABLE_TO_REMOVE_CANT_BE_NULL_MESSAGE + '\'' + "}" + super.toString();
     }
