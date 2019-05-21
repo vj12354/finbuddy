@@ -65,3 +65,6 @@ module focus --moduleName service-api
 service --entity model:~.TxnPnl --repository repository:~.TxnPnlRepository --interface ~.TxnPnlService
 module focus --moduleName application 
 web mvc controller --entity model:~.TxnPnl --responseType THYMELEAF 
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2019-05-21 15:02:26
+jpa setup --provider HIBERNATE --database MYSQL --databaseName finbuddy --hostName localhost --userName vijay --password vijay --profile localdev 
+web mvc controller --entity model:~.TxnPnl --responseType THYMELEAF 

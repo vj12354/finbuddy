@@ -22,6 +22,18 @@ privileged aspect TxnPnlRepositoryImpl_Roo_Jpa_Repository_Impl {
     declare @type: TxnPnlRepositoryImpl: @Transactional(readOnly = true);
     
     /**
+     * TODO Auto-generated attribute documentation
+     * 
+     */
+    public static final String TxnPnlRepositoryImpl.CUSTOMER = "customer";
+    
+    /**
+     * TODO Auto-generated attribute documentation
+     * 
+     */
+    public static final String TxnPnlRepositoryImpl.TX = "tx";
+    
+    /**
      * TODO Auto-generated method documentation
      * 
      * @param globalSearch
@@ -34,10 +46,12 @@ privileged aspect TxnPnlRepositoryImpl_Roo_Jpa_Repository_Impl {
         
         JPQLQuery<TxnPnl> query = from(txnPnl);
         
-        Path<?>[] paths = new Path<?>[] {};        
+        Path<?>[] paths = new Path<?>[] {txnPnl.customer,txnPnl.tx};        
         applyGlobalSearch(globalSearch, query, paths);
         
-        AttributeMappingBuilder mapping = buildMapper();
+        AttributeMappingBuilder mapping = buildMapper()
+			.map(CUSTOMER, txnPnl.customer)
+			.map(TX, txnPnl.tx);
         
         applyPagination(pageable, query, mapping);
         applyOrderById(query);

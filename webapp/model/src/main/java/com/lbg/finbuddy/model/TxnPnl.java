@@ -6,6 +6,7 @@ import org.springframework.roo.addon.jpa.annotations.entity.RooJpaEntity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Version;
 
 /**
@@ -34,4 +35,10 @@ public class TxnPnl {
      */
     @Version
     private Integer version;
+    
+    @ManyToOne
+    private Customer customer;
+    
+    @ManyToOne
+    private Txn tx;
 }

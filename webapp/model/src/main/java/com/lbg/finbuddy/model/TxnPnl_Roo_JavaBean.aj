@@ -3,6 +3,8 @@
 
 package com.lbg.finbuddy.model;
 
+import com.lbg.finbuddy.model.Customer;
+import com.lbg.finbuddy.model.Txn;
 import com.lbg.finbuddy.model.TxnPnl;
 
 privileged aspect TxnPnl_Roo_JavaBean {
@@ -41,6 +43,42 @@ privileged aspect TxnPnl_Roo_JavaBean {
      */
     public void TxnPnl.setVersion(Integer version) {
         this.version = version;
+    }
+    
+    /**
+     * TODO Auto-generated method documentation
+     * 
+     * @return Customer
+     */
+    public Customer TxnPnl.getCustomer() {
+        return this.customer;
+    }
+    
+    /**
+     * TODO Auto-generated method documentation
+     * 
+     * @param customer
+     */
+    public void TxnPnl.setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+    
+    /**
+     * TODO Auto-generated method documentation
+     * 
+     * @return Txn
+     */
+    public Txn TxnPnl.getTx() {
+        return this.tx;
+    }
+    
+    /**
+     * TODO Auto-generated method documentation
+     * 
+     * @param tx
+     */
+    public void TxnPnl.setTx(Txn tx) {
+        this.tx = tx;
     }
     
 }
