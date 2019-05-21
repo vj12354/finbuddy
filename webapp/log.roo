@@ -31,3 +31,15 @@ repository jpa --entity model:~.DirectDebt --interface ~.DirectDebtRepository
 module focus --moduleName model 
 entity jpa --class ~.ThirdParty
 field string --fieldName description
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2019-05-21 13:18:51
+module focus --moduleName repository 
+repository jpa --entity model:~.ThirdParty --interface ~.ThirdPartyRepository
+module focus --moduleName service-api 
+service --entity model:~.Customer --repository repository:~.CustomerRepository --interface ~.CustomerService
+service --entity model:~.Account --repository repository:~.AccountRepository --interface ~.AccountService
+service --entity model:~.Txn --repository repository:~.TxnRepository --interface ~.TxnService
+service --entity model:~.DirectDebt --repository repository:~.DirectDebtRepository --interface ~.DirectDebtService
+service --entity model:~.ThirdParty --repository repository:~.ThirdPartyRepository --interface ~.ThirdPartyService
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2019-05-21 13:40:54
+module focus --moduleName application 
+web mvc setup 

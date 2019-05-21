@@ -77,6 +77,22 @@
             <groupId>io.springlets</groupId>
             <artifactId>springlets-data-commons</artifactId>
         </dependency>
+    <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+        </dependency>
+    <dependency>
+            <groupId>io.tracee.binding</groupId>
+            <artifactId>tracee-springmvc</artifactId>
+        </dependency>
+    <dependency>
+            <groupId>io.springlets</groupId>
+            <artifactId>springlets-boot-starter-web</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
