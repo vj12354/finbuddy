@@ -17,6 +17,8 @@ privileged aspect ThirdParty_Roo_ToString {
                 "id='" + id + '\'' + 
                 ", version='" + version + '\'' + 
                 ", description='" + description + '\'' + 
+                ", nomber='" + nomber + '\'' + 
+                ", sortcode='" + sortcode + '\'' + 
                 ", ITERABLE_TO_ADD_CANT_BE_NULL_MESSAGE='" + ITERABLE_TO_ADD_CANT_BE_NULL_MESSAGE + '\'' + 
                 ", ITERABLE_TO_REMOVE_CANT_BE_NULL_MESSAGE='" + ITERABLE_TO_REMOVE_CANT_BE_NULL_MESSAGE + '\'' + "}" + super.toString();
     }

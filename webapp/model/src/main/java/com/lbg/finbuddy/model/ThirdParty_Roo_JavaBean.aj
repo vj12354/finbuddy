@@ -61,4 +61,40 @@ privileged aspect ThirdParty_Roo_JavaBean {
         this.description = description;
     }
     
+    /**
+     * TODO Auto-generated method documentation
+     * 
+     * @return String
+     */
+    public String ThirdParty.getNomber() {
+        return this.nomber;
+    }
+    
+    /**
+     * TODO Auto-generated method documentation
+     * 
+     * @param nomber
+     */
+    public void ThirdParty.setNomber(String nomber) {
+        this.nomber = nomber;
+    }
+    
+    /**
+     * TODO Auto-generated method documentation
+     * 
+     * @return String
+     */
+    public String ThirdParty.getSortcode() {
+        return this.sortcode;
+    }
+    
+    /**
+     * TODO Auto-generated method documentation
+     * 
+     * @param sortcode
+     */
+    public void ThirdParty.setSortcode(String sortcode) {
+        this.sortcode = sortcode;
+    }
+    
 }

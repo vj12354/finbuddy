@@ -444,6 +444,12 @@ privileged aspect ThirdPartiesCollectionThymeleafController_Roo_Thymeleaf {
         else if (columnName.equals("description")) {
             builder.addColumn(getMessageSource().getMessage("label_thirdparty_description", null, "Description", locale), "description", String.class.getName(), 100);
         }
+        else if (columnName.equals("nomber")) {
+            builder.addColumn(getMessageSource().getMessage("label_thirdparty_nomber", null, "Nomber", locale), "nomber", String.class.getName(), 100);
+        }
+        else if (columnName.equals("sortcode")) {
+            builder.addColumn(getMessageSource().getMessage("label_thirdparty_sortcode", null, "Sortcode", locale), "sortcode", String.class.getName(), 100);
+        }
         }
         catch (ColumnBuilderException e) {
             String errorMessage = getMessageSource().getMessage("error_exportingErrorException", 

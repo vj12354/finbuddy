@@ -7,6 +7,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Version;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 /**
  * = ThirdParty
@@ -40,4 +43,22 @@ public class ThirdParty {
      *
      */
     private String description;
+
+    /**
+     * TODO Auto-generated attribute documentation
+     *
+     */
+    @NotNull
+    @Size(min = 8, max = 8)
+    @Pattern(regexp = "\\d+")
+    private String nomber;
+
+    /**
+     * TODO Auto-generated attribute documentation
+     *
+     */
+    @NotNull
+    @Size(min = 6, max = 6)
+    @Pattern(regexp = "\\d+")
+    private String sortcode;
 }

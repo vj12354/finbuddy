@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
-    <head id="head">
+  <head id="head">
 
-    <title data-th-text="|#{label_show_entity(#{label_thirdparty})}|">Show ThirdParty - Spring Roo application</title>
+    <title data-th-text="|#{label_show_entity(#{label_txnpnl})}|">Show TxnPnl - Spring Roo application</title>
 
   </head>
 
@@ -19,27 +19,24 @@
         Only the inner content of the following tag "section" is included
         within the template, in the section "content"
       -->
-      <section data-th-fragment="inline-content" data-layout-fragment="content" data-th-object="${thirdParty}">
-        <div>
+      <section data-layout-fragment="content">
+        <div class="container-fluid content">
 
           <!-- CONTENT -->
+          <h1 data-th-text="#{label_show_entity(#{label_txnpnl})}">Generate Pay Day loans...</h1>
+
             <div id="mainEntityFieldSet">
-              <ul class="list-unstyled" id="containerFields">
-                  <li id="thirdparty-description-field" data-z="3c311af4">
-            	      <strong data-th-text="#{label_thirdparty_description}">description</strong>
-                    <span data-th-text="*{{description}}">descriptionValue</span>
-         	        </li>
-                  <li id="thirdparty-nomber-field" data-z="3e2048ca">
-            	      <strong data-th-text="#{label_thirdparty_nomber}">nomber</strong>
-                    <span data-th-text="*{{nomber}}">nomberValue</span>
-         	        </li>
-                  <li id="thirdparty-sortcode-field" data-z="c38d990a">
-            	      <strong data-th-text="#{label_thirdparty_sortcode}">sortcode</strong>
-                    <span data-th-text="*{{sortcode}}">sortcodeValue</span>
-         	        </li>
-              </ul>
+              In progres.... 
             </div>
 
+          <div class="clearfix">
+            <div class="pull-left">
+              <a id="TxnPnl_list" href="list.html" class="btn btn-default" data-th-title="#{label_goBack}" data-th-href="${@linkBuilder.of('TxnPnlsCollectionThymeleafController').to('list')}">
+  	             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  	             <span data-th-text="#{label_back}">Back</span>
+  	          </a>
+            </div>
+          </div>
         </div>
 
       </section>

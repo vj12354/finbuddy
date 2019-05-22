@@ -70,3 +70,4 @@ jpa setup --provider HIBERNATE --database MYSQL --databaseName finbuddy --hostNa
 web mvc controller --entity model:~.TxnPnl --responseType THYMELEAF 
 // Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2019-05-21 15:36:58
 // Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2019-05-21 15:39:09
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2019-05-21 16:16:18

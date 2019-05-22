@@ -28,6 +28,18 @@ privileged aspect ThirdPartyRepositoryImpl_Roo_Jpa_Repository_Impl {
     public static final String ThirdPartyRepositoryImpl.DESCRIPTION = "description";
     
     /**
+     * TODO Auto-generated attribute documentation
+     * 
+     */
+    public static final String ThirdPartyRepositoryImpl.NOMBER = "nomber";
+    
+    /**
+     * TODO Auto-generated attribute documentation
+     * 
+     */
+    public static final String ThirdPartyRepositoryImpl.SORTCODE = "sortcode";
+    
+    /**
      * TODO Auto-generated method documentation
      * 
      * @param globalSearch
@@ -40,11 +52,13 @@ privileged aspect ThirdPartyRepositoryImpl_Roo_Jpa_Repository_Impl {
         
         JPQLQuery<ThirdParty> query = from(thirdParty);
         
-        Path<?>[] paths = new Path<?>[] {thirdParty.description};        
+        Path<?>[] paths = new Path<?>[] {thirdParty.description,thirdParty.nomber,thirdParty.sortcode};        
         applyGlobalSearch(globalSearch, query, paths);
         
         AttributeMappingBuilder mapping = buildMapper()
-			.map(DESCRIPTION, thirdParty.description);
+			.map(DESCRIPTION, thirdParty.description)
+			.map(NOMBER, thirdParty.nomber)
+			.map(SORTCODE, thirdParty.sortcode);
         
         applyPagination(pageable, query, mapping);
         applyOrderById(query);
